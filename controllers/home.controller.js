@@ -1,5 +1,5 @@
 const CarouselModel = require("../models/carousel")
-const CarouselModel = new CarouselModel 
+const carouselModel = new CarouselModel 
 
 
 class HomeController{
