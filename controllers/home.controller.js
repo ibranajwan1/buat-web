@@ -1,18 +1,11 @@
-const CarouselModel = require("../models/carousel")
-const carouselModel = new CarouselModel 
+class HomeController {
+    indexHome(req, res) {
+        res.render("home");
+    }
 
-
-class HomeController{
-    async index(req,res) {
-        
-        try {
-            const carousels = await carouselModel.findALL
-            res.render('home', {
-                carousels
-            })
-        } catch (error) {
-            
-        }
+    indexFeedback(req, res) {
+        res.render("feedback");
     }
 }
-module.exports = HomeController
+
+module.exports = HomeController;

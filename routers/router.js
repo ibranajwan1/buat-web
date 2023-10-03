@@ -1,8 +1,11 @@
-const express = require('express');
-const HomeController = require('../controllers/home.controller');
+const express = require("express");
+const homeRouter = require("./web/home");
 const router = express.Router();
-const homeController = new HomeController();
 
-router.get('/', homeController.index);
+router.use('/', homeRouter);
+router.use('/', (req, res) => {
+    res.render("errors/404");
+});
 
-module.exports = router
+
+module.exports = router;
